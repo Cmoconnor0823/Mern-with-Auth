@@ -1,4 +1,4 @@
-# Simple Mern auth demo
+# Simple Mern auth demo 
 
 ## Step one
 First you will need to create a folder to store your project in. 
