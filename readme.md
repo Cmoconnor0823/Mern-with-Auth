@@ -1,4 +1,4 @@
-# Simple Mern auth demo 
+# Simple Mern auth demo Pt One
 
 ## Step one
 First you will need to create a folder to store your project in. 
@@ -64,3 +64,19 @@ From there we will need to connect to our database with mongoose
   }
 );
 ``
+
+
+
+## Step 4
+Now that we are connected to our database, it is time to define what that looks like by creating a user Model. To do this first we need to create a folder called models and we will make a new js file called usermodel.js. to create the user model first we will need to import mongoose. Next you will need to create a new Schema that will define what data you are saving in your database, in this case we have a email, a password, and a displayName. Finally don't forget to export the model.
+
+``
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+    email: {type: String, required: true, unique: true},
+    password:{type: String, required: true, minlength:5},
+    displayName: { type: String },
+});
+
+module.exports = User = mongoose.model("user", userSchema);
