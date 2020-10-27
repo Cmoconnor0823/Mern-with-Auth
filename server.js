@@ -20,7 +20,7 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
+   
   },
   (err) => {
     if (err) throw err;
@@ -28,6 +28,6 @@ mongoose.connect(
   }
 );
 
-// app.use("/users", require("./routes/users"));
+app.use("/users", require("./routes/users"));
 
 //app.use("/todos", require("./routes/todo"));
